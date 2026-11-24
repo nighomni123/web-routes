@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Web Routes Window Selector",
+  "version": "1.1",
+  "description": "Connects Firefox window choices to Web Routes on this Mac.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "windows@web-routes.local",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "browsingActivity"
+        ]
+      }
+    }
+  },
+  "permissions": [
+    "nativeMessaging",
+    "proxy",
+    "tabs",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "windows.js"
+    ]
+  }
+}
